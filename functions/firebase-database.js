@@ -55,5 +55,6 @@ const getEmployeeById = employeeId => {
 module.exports = {
   getAllEmployees,
   getEmployeeById,
-  initializeApp
+  initializeApp,
+  firebase
 };

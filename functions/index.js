@@ -41,6 +41,11 @@ app.get('/favicon.ico', function(req, res) {
   res.send(204);
 });
 
+app.get('/login', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=60, s-maxage=180');
+  renderApplication(req.url, res, {});
+});
+
 app.get('/:userId?', (req, res) => {
   res.set('Cache-Control', 'public, max-age=60, s-maxage=180');
   if (req.params.userId) {
